@@ -1,0 +1,115 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+  </head>
+  <style>
+  /* * * * * * * * * * * 
+ *      Dot Leader
+ * * * * * * * * * * * */
+ul.leaders {
+  max-width: 37em;
+  padding: 0;
+  overflow-x: hidden;
+  list-style: none;
+}
+ul.leaders li:before {
+  float: left;
+  width: 0;
+  white-space: nowrap;
+  color: #a33131;
+  content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+}
+ul.leaders span:first-child {
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding-right: 0.33em;
+  background: #c55;
+}
+ul.leaders span + span {
+  float: right;
+  padding-left: 0.33em;
+  background: #c55;
+}
+ul.leaders span + span:before {
+  content: '$';
+  padding-right: 0.15em;
+}
+.fancy-rule {
+  border: none;
+  width: 600px;
+  overflow: hidden;
+  height: 20px;
+  text-align: center;
+  color: #a33131;
+}
+.rgba {
+  color: rgba(0, 0, 0, 0.15);
+}
+.fancy-rule.asterism:before {
+  content: "o————|| ⧖ ||————o";
+  letter-spacing: -1px;
+}
+/* Page setup & Styling */
+*::selection {
+  background-color: #1a1a1a;
+  color: aliceblue;
+}
+body {
+  background-color: #c55;
+  color: #feca1e;
+  font-family: 'Avenir Next', sans-serif;
+}
+section {
+  position: absolute;
+  left: calc(50% - 14em);
+  width: 38em;
+}
+
+  </style>
+  <body>
+  <section class="container">
+  <h1> Normalish Food </h1>
+  <ul class="leaders">
+    <li>
+      <span>Grilled Cheese</span>
+      <span>7.95</span>
+    </li>
+    <li>
+      <span>Wonton Soup</span>
+      <span>8.95</span>
+    </li>
+    <li>
+      <span>Waffles</span>
+      <span>7.95</span>
+    </li>
+    <li>
+      <span>Shrimp Etouffee</span>
+      <span>15.25</span>
+    </li>
+    <li>
+      <span>Miso Ramen</span>
+      <span>10.95</span>
+    </li>
+  </ul>
+  <hr class="fancy-rule asterism">
+  <!--<hr class="fancy-rule asterism rgba">-->
+  <h1> Delicacies </h1>
+  <ul class="leaders">
+    <li>
+      <span>Bear Foot Soup</span>
+      <span>7.95</span>
+    </li>
+    <li>
+      <span>Fried Raptor Eggs</span>
+      <span>24.95</span>
+    </li>
+    <li>
+      <span>Raspberry Asparagus Creme Brulée</span>
+      <span>13.95</span>
+    </li>
+  </ul>
+</section>
+  </body>
+</html>
